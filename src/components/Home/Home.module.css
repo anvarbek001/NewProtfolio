@@ -1,0 +1,334 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.section_divider {
+  line-height: 0;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  transform: rotateZ(180deg);
+}
+
+.section_divider svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: transparent;
+}
+
+.about_container {
+  position: relative;
+  z-index: 1;
+  background-color: #f8f9fa; /* yoki siz xohlagan rang */
+  margin-top: 2%; /* no extra space */
+  padding-top: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #0f172a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 70px;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header .icons {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+}
+
+.header .icons h1 {
+  color: #f8fafc;
+}
+
+.header .icons img {
+  width: 100%;
+  border-radius: 0 60% 0 60%;
+  background: white;
+  position: relative;
+  box-shadow: -4px -4px 7px rgb(5, 194, 237), 4px 4px 7px rgb(3, 254, 158);
+  transition: all 0.3s ease-in-out;
+}
+
+.header .icons img:hover {
+  box-shadow: -4px -4px 7px rgb(3, 254, 158), 4px 4px 7px rgb(5, 194, 237);
+}
+
+.header .pages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+
+.header .pages a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #38bdf8;
+  border-radius: 8px;
+  padding: 6px 8px;
+  transition: all 0.4s ease;
+  display: inline-block;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.15);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.header .pages a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, #0ea5e9, #38bdf8, #0ea5e9);
+  opacity: 0.1;
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+
+.header .pages a:hover::before {
+  left: 0;
+  opacity: 0.2;
+}
+
+.header .pages a:hover {
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.4);
+  background: linear-gradient(#1e293b, #1e293b) padding-box,
+    linear-gradient(135deg, #7dd3fc, #0ea5e9, #38bdf8) border-box;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: #38bdf8;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.body {
+  max-width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #0f172a 0%,
+    #1e293b 40%,
+    #475569 70%,
+    #68748f 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 15px;
+  text-align: center;
+}
+
+/* Responsive menu sliding from right */
+@media (max-width: 842px) {
+  .pages {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 50vh;
+    width: 50%;
+    max-width: 130px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(15, 23, 42, 0.8);
+    padding: 80px 20px 20px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    transition: right 0.4s ease;
+    z-index: 999;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .pages.show {
+    right: 0;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1000;
+    color: #38bdf8;
+    cursor: pointer;
+  }
+
+  .section_divider {
+    line-height: 0;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    transform: rotateZ(180deg);
+  }
+
+  .section_divider svg {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: transparent;
+  }
+}
+
+.body .body_text {
+  line-height: 2;
+  padding: 0 25%;
+}
+
+.body .body_text p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  background: linear-gradient(
+    to right,
+    #03f7be 0%,
+    #0dff00 40%,
+    #ddf503 70%,
+    #ec0c0c 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Download_button {
+  margin-top: 10px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 12px 20px;
+  color: white;
+  background: rgb(103, 92, 156);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em rgba(59, 48, 78, 0.527);
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.Download_button svg {
+  margin-right: 8px;
+  width: 25px;
+}
+
+.Download_button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em rgba(88, 71, 116, 0.627);
+}
+
+.Download_button:active {
+  box-shadow: 0 0.3em 1em -0.5em rgba(88, 71, 116, 0.627);
+}
+
+.Download_button::before {
+  content: "";
+  width: 4px;
+  height: 40%;
+  background-color: white;
+  position: absolute;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.Download_button::after {
+  content: "";
+  width: 4px;
+  height: 40%;
+  background-color: white;
+  position: absolute;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  right: 0;
+  transition: all 0.2s;
+}
+
+.Download_button:hover::before,
+.Download_button:hover::after {
+  height: 60%;
+}
+
+.animated_text {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(
+    to right,
+    #03f7be 0%,
+    #0dff00 40%,
+    #ddf503 70%,
+    #ec0c0c 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  margin-top: 100px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade_in {
+  opacity: 1;
+}
+
+.fade_out {
+  opacity: 0;
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .header .icons {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    /* text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  }
+
+  .header .icons h1 {
+    color: #f8fafc;
+    font-size: 25px;
+  }
+
+  .body .body_text {
+    padding: 0;
+  }
+
+  .body .body_text h1 {
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+
+  .body .body_text p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
