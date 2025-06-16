@@ -16,7 +16,7 @@ const App = () => {
   const location = useLocation();
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
-    Aos.refresh(); // sahifa o‘zgarganda AOS-ni yangilash
+    Aos.refresh();
   }, [location]);
 
   return (
