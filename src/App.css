@@ -1,5 +1,17 @@
-*{
+/** @format */
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    #0f172a 0%,
+    #1e293b 40%,
+    #475569 70%,
+    #68748f 100%
+  );
 }

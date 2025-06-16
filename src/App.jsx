@@ -7,7 +7,10 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Projects from "./components/Skills/Projects";
+import Projects from "./components/Projects/Projects";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Connect from "./components/Connect/Connect";
 
 const App = () => {
   const location = useLocation();
@@ -17,13 +20,26 @@ const App = () => {
   }, [location]);
 
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
-    </>
+    <div>
+      <section id="header">
+        <Header />
+      </section>
+      <section id="home">
+        <Home />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="connect">
+        <Connect />
+      </section>
+      <section id="footer">
+        <Footer />
+      </section>
+    </div>
   );
 };
 

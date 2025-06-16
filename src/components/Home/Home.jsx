@@ -32,7 +32,6 @@ const Home = () => {
 
   return (
     <div>
-      <Header />
       <div className={styles.body}>
         <div className={styles.body_text} data-aos="zoom-in-down">
           <h1
@@ -69,7 +68,6 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 };

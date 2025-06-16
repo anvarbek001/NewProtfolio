@@ -24,19 +24,13 @@ const Header = () => {
         {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </div>
 
-      <div className={`${header.pages} ${menuOpen ? header.show : ""}`} data-aos="zoom-in-down">
-        <Link to="/">
-          <a href="#home">Home</a>
-        </Link>
-        <Link to={"/about"}>
-          <a href="#about">About</a>
-        </Link>
-        <Link to={"/projects"}>
-          <a href="#projects">Projects</a>
-        </Link>
-        <Link to={"/connect"}>
-          <a href="#skills">Connect</a>
-        </Link>
+      <div
+        className={`${header.pages} ${menuOpen ? header.show : ""}`}
+        data-aos="zoom-in-down">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#connect">Connect</a>
       </div>
     </div>
   );

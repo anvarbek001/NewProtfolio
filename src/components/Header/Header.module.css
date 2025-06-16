@@ -1,4 +1,7 @@
 /** @format */
+html{
+  scroll-behavior: smooth;
+}
 
 .header {
   display: flex;

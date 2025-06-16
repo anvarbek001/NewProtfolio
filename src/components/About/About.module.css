@@ -1,13 +1,13 @@
 /** @format */
 
 .about_section {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     #cdd2e0 0%,
     #475569 40%,
     #1e293b 70%,
     #0f172a 100%
-  );
+  ); */
   color: white;
 }
 

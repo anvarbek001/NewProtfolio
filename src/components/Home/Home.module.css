@@ -130,13 +130,13 @@
 .body {
   max-width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     #0f172a 0%,
     #1e293b 40%,
     #475569 70%,
     #68748f 100%
-  );
+  ); */
   display: flex;
   align-items: center;
   justify-content: space-around;
