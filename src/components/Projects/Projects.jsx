@@ -14,7 +14,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Telegram Bot",
+    title: "title2",
     image: "/images/landing.png",
     description: "project2_desc",
     link: "https://stalwart-crepe-3d3416.netlify.app/",
