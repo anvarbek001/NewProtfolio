@@ -7,7 +7,7 @@ const projects = [
   {
     id: 1,
     title: "Admin Panel CRM",
-    image: "/public/images/crmlogin.png",
+    image: "/images/crmlogin.png",
     description:
       "Laravel & React asosida yaratilgan CRM tizimi. CRUD, grafiklar, statistikalar mavjud.",
     link: "/",
@@ -15,14 +15,14 @@ const projects = [
   {
     id: 2,
     title: "Telegram Bot",
-    image: "/public/images/landing.png",
+    image: "/images/landing.png",
     description: "CRM uchun langin page.",
     link: "https://stalwart-crepe-3d3416.netlify.app/",
   },
   {
     id: 3,
     title: "E-Commerce Web App",
-    image: "/public/images/crm.png",
+    image: "/images/crm.png",
     description:
       "To‘liq ishlab chiqilgan onlayn do‘kon: mahsulotlar, savatcha, to‘lovlar.",
     link: "/",
