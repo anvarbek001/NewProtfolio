@@ -1,5 +1,5 @@
 /** @format */
-
+import "./i18n.js";
 import React, { useEffect } from "react";
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";

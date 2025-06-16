@@ -4,6 +4,7 @@ import abouts from "./About.module.css";
 import React, { useEffect, useRef } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import { useTranslation } from "react-i18next";
 const skillsData = [
   { name: "HTML", percent: 80 },
   { name: "CSS", percent: 80 },
@@ -17,6 +18,7 @@ const skillsData = [
 ];
 const About = () => {
   const refs = useRef([]);
+  const {t} = useTranslation();
 
   useEffect(() => {
     refs.current.forEach((el, i) => {
@@ -25,7 +27,7 @@ const About = () => {
         setTimeout(() => {
           el.style.transition = "width 2s ease";
           el.style.width = skillsData[i].percent + "%";
-        }, 100); // delay for animation trigger
+        }, 100);
       }
     });
   }, []);
@@ -35,35 +37,27 @@ const About = () => {
       <div className={abouts.about_section}>
         <div className={abouts.skills_section}>
           <h2 className={abouts.section_title} data-aos="zoom-in-down">
-            About Me
+            {t('haqida')}
           </h2>
           <p className={abouts.section_subtitle}></p>
           <div className={abouts.skills_container}>
             <div className={abouts.bio}>
-              <h3 data-aos="zoom-in-down">Hi There! I'm Anvarbek Ergashev</h3>
+              <h3 data-aos="zoom-in-down">{t('Iam')}</h3>
               <p data-aos="zoom-in-down">
-                I'm a Laravel-focused full-stack developer with deep experience
-                in building scalable, real-world web applications. I specialize
-                in creating complex admin panels, large data exports (30,000+
-                rows), dynamic CRUD systems, and smart automation tools. My work
-                includes optimized Excel generation, task and attendance
-                tracking, modal-based interfaces, and Telegram bots with survey
-                logic and Excel export features. I strive to write clean,
-                efficient code and build solutions that are not only functional
-                but also user-friendly and maintainable.
+                {t('aboutdesc')}
               </p>
               <ul data-aos="zoom-in-down">
                 <li>
-                  <strong>Date of birth:</strong> 8 September 2001
+                  <strong>{t('date')}</strong> 8 {t('september')} 2001
                 </li>
                 <li>
-                  <strong>Phone:</strong> +998 93 873 18 09
+                  <strong>{t('Phone')}:</strong> +998 93 873 18 09
                 </li>
                 <li>
                   <strong>Email:</strong> ergashevanvarbek00700@gmail.com
                 </li>
                 <li>
-                  <strong>Location:</strong> Uzbekistan,Jizzakh
+                  <strong>{t('Location')}:</strong> Uzbekistan,Jizzakh
                 </li>
               </ul>
             </div>

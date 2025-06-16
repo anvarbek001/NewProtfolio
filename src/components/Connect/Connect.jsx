@@ -2,9 +2,11 @@
 import emailjs from "emailjs-com";
 import { useRef } from "react";
 import styles from "./Connect.module.css";
+import { useTranslation } from "react-i18next";
 
 const Connect = () => {
   const form = useRef();
+  const {t} = useTranslation();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,13 +32,13 @@ const Connect = () => {
   return (
     <section id="connect" className={styles.connectSection}>
       <div className={styles.connectContainer}>
-        <h2>Connect</h2>
+        <h2>{t('Connect')}</h2>
         <form className={styles.connectForm} ref={form} onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="Ismingiz" required />
+          <input type="text" name="name" placeholder={t('your_name')} required />
           <input
             type="email"
             name="email"
-            placeholder="Email manzilingiz"
+            placeholder={t('address')}
             required
           />
           <input
@@ -50,11 +52,11 @@ const Connect = () => {
           />
           <textarea
             name="message"
-            placeholder="Xabaringizni yozing..."
+            placeholder={t('message')}
             rows="5"
             required
           />
-          <button type="submit">Yuborish</button>
+          <button type="submit">{t('send')}</button>
         </form>
       </div>
     </section>

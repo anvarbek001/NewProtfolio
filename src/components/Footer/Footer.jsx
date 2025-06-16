@@ -1,15 +1,11 @@
 /** @format */
 
-import {
-  FaFacebookF,
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import footer from "./Footer.module.css";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const {t} = useTranslation();
   return (
     <footer className={footer.footer}>
       <div className={footer.container}>
@@ -18,12 +14,12 @@ const Footer = () => {
             Anvar<span>Dev</span>
           </h2>
           <p className={footer.tagline}>
-            Let’s connect and build something great together!
+            {t('lets')}
           </p>
         </div>
 
         <div className={footer.social}>
-          <h4 className={footer.socialTitle}>Follow Me</h4>
+          <h4 className={footer.socialTitle}>{t('follow')}</h4>
           <div className={footer.icons}>
             <a
               href="https://www.youtube.com/@Web_developer_frontEnd"
@@ -57,7 +53,7 @@ const Footer = () => {
         </div>
 
         <div className={footer.right}>
-          <p>© {new Date().getFullYear()} AnvarDev. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AnvarDev. {t('reserved')}</p>
         </div>
       </div>
     </footer>

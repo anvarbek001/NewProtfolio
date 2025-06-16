@@ -2,53 +2,53 @@
 
 import React from "react";
 import styles from "./Projects.module.css";
+import { useTranslation } from "react-i18next";
 
 const projects = [
   {
     id: 1,
-    title: "Admin Panel CRM",
+    title: "title1",
     image: "/images/crmlogin.png",
-    description:
-      "Laravel & React asosida yaratilgan CRM tizimi. CRUD, grafiklar, statistikalar mavjud.",
+    description:"project1_desc",
     link: "/",
   },
   {
     id: 2,
     title: "Telegram Bot",
     image: "/images/landing.png",
-    description: "CRM uchun langin page.",
+    description: "project2_desc",
     link: "https://stalwart-crepe-3d3416.netlify.app/",
   },
   {
     id: 3,
     title: "E-Commerce Web App",
     image: "/images/crm.png",
-    description:
-      "To‘liq ishlab chiqilgan onlayn do‘kon: mahsulotlar, savatcha, to‘lovlar.",
+    description:"project3_desc",
     link: "/",
   },
 ];
 
 const Projects = () => {
+  const {t} = useTranslation();
   return (
     <section id="projects" className={styles.projectsSection}>
-      <h2 className={styles.sectionTitle}>Projects</h2>
+      <h2 className={styles.sectionTitle}>{t('Projects')}</h2>
       <div className={styles.projectGrid}>
         {projects.map((project) => (
           <div key={project.id} className={styles.projectCard}>
             <img
               src={project.image}
-              alt={project.title}
+              alt={t(project.title)}
               className={styles.projectImage}
             />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <h3>{t(project.title)}</h3>
+            <p>{t(project.description)}</p>
             <a
               href={project.link}
               target="_blank"
               rel="noreferrer"
               className={styles.viewButton}>
-              Ko‘rish
+              {t('wiew')}
             </a>
           </div>
         ))}
